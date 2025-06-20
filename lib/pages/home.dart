@@ -146,11 +146,36 @@ class _HomeState extends State<Home> {
         
         Padding(
           padding: const EdgeInsets.only(left: 25, right: 25),
-          child: Text("Clique aqui, para configurar um gesto ou comando \nde voz, para acionar o botão de emerência.",
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.bold
-          ),
+          child: TextButton(
+            onPressed: (){},
+            style: TextButton.styleFrom(
+              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+              minimumSize: Size(0, 0),
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent
+            ), 
+            child: Column(
+            children: [
+              Text("Clique aqui, para configurar um gesto ou comando",
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                backgroundColor: Color(0xfffff1f9)
+              ),
+              ),
+              Text("de voz, para acionar o botão de emergência.",
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                backgroundColor: Color(0xfffff1f9)
+              ),
+              ),
+            ],
+            )
           ),
         )
 
