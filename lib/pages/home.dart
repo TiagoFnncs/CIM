@@ -156,9 +156,8 @@ class _HomeState extends State<Home> {
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent
               ), 
-              child: Column(
-              children: [
-                Text("Clique aqui, para configurar um gesto ou comando",
+              child: Text("Clique aqui, para configurar um gesto ou comando\nde voz, para acionar o botão de emergência.",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.black,
@@ -166,18 +165,7 @@ class _HomeState extends State<Home> {
                   decoration: TextDecoration.underline,
                   backgroundColor: Color(0xfffff1f9)
                 ),
-                ),
-                Text("de voz, para acionar o botão de emergência.",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  decoration: TextDecoration.underline,
-                  backgroundColor: Color(0xfffff1f9)
-                ),
-                ),
-              ],
-              )
+              ),
             ),
           ),
       
@@ -186,7 +174,160 @@ class _HomeState extends State<Home> {
           Container(
             width: double.infinity,
             height: 500,
-          )
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/background_SolicitarMedida.png"),
+                fit: BoxFit.cover
+              ),
+            ),
+            
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 50, left: 45, right: 45),
+                  child: Text("Solicite seu pedido\nde medida\nprotetiva online",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 30,
+                    height: 1.2,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.25), 
+                        offset: Offset(0, 10), 
+                        blurRadius: 37, 
+                      ),
+                    ],
+                  ),
+                  ),
+                ),
+
+                SizedBox(height: 25,),
+
+                Center(
+                  child: ElevatedButton(
+                    onPressed: (){}, 
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff590037),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(13)
+                      )
+                    ),
+                    child: Text("ACESSAR COM CADASTRO DO GOV",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                        fontSize: 16,
+                      ),
+                    ),
+                    ),
+                ),
+
+                SizedBox(height: 30,),
+
+                //Botão 190
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Está passando por uma\nsituação de emergência?",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      shadows: [
+                        Shadow(
+                          color: Colors.black.withOpacity(0.25), 
+                          offset: Offset(0, 10), 
+                          blurRadius: 37, 
+                        ),
+                      ],
+                    ),
+                    ),
+
+                    SizedBox(width: 10,),
+
+                    ElevatedButton(
+                      onPressed: (){}, 
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xff590037),
+                        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(13)
+                        )
+                      ),
+                      child: Text("LIGUE 190",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16
+                      ),)
+                      )
+                  ],
+                ),
+                
+                SizedBox(height: 30,),
+
+                Container(
+                  width: double.infinity,
+                  height: 130,
+                  decoration: BoxDecoration(
+                    color: Color(0xff8d50b0)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "O que são\n",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 20
+                                )
+                              ),
+                              TextSpan(
+                                text: "medidas\nprotetivas?",
+                                style: TextStyle(
+                                  color: Color(0xfffba0d8),
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 20
+                                )
+                              )
+                            ]
+                          )
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          child: Container(
+                            height: 115,
+                            width: 3,
+                            decoration: BoxDecoration(
+                              color: Color(0xff4d58a4)
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(
+                          width: 260,
+                          child: Image.asset("assets/images/text_MedidaProtetiva.png"
+                          ))
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     ),
