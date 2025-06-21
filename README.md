@@ -1,16 +1,14 @@
-# app_cim
+# CIM - Centro de Informações à Mulher
 
-A new Flutter project.
+🌐 Aplicativo de apoio à prevenção da violência contra a mulher no Distrito Federal.
 
-## Getting Started
+## 📱 Sobre o projeto
 
-This project is a starting point for a Flutter application.
+Este repositório apresenta a **interface inicial** do aplicativo **CIM**, que visa oferecer um ambiente seguro, informativo e acessível para mulheres em situação de vulnerabilidade. A proposta do app é conectar usuárias a serviços de proteção, informação e apoio, utilizando tecnologia centrada no usuário e escalável.
 
-A few resources to get you started if this is your first Flutter project:
+> ⚠️ **Importante:** Este repositório contém **somente a UI (tela inicial)** do app. Os botões e interações visuais **não possuem funcionalidade implementada**.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Para uma versão mais funcional e de **baixa fidelidade**, acesse:
+👉 [`CIMFigma`](https://github.com/TiagoFnncs/CIMFigma)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> 🛠️ Desenvolvido com **Flutter** e a linguagem **Dart**.
